@@ -400,16 +400,18 @@ Possible future enhancements include:
 
 ## Mermaid workflow
 
+```mermaid
 flowchart LR
-A[Base LLM]
-B[Non-Instruction Fine-Tuning]
-C[Instruction Fine-Tuning (SFT)]
-D[DPO Alignment]
-E[Merged Model]
-F[FastAPI Backend]
-G[Streamlit UI]
+    A[Base LLM]
+    B[Non-Instruction Fine-Tuning]
+    C[Instruction Fine-Tuning (SFT)]
+    D[DPO Alignment]
+    E[Merged Model]
+    F[FastAPI Backend]
+    G[Streamlit UI]
 
-A --> B --> C --> D --> E --> F --> G
+    A --> B --> C --> D --> E --> F --> G
+```
 ```
 ---
 

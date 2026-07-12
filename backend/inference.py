@@ -20,19 +20,26 @@ def generate_answer(question: str):
         }
     ]
 
+    # Create chat prompt
     prompt = tokenizer.apply_chat_template(
         messages,
         tokenize=False,
         add_generation_prompt=True,
     )
 
+    # Tokenize
     inputs = tokenizer(
         prompt,
         return_tensors="pt",
     )
 
-    inputs = {k: v.to(model.device) for k, v in inputs.items()}
+    # Move tensors to model device
+    inputs = {
+        k: v.to(model.device)
+        for k, v in inputs.items()
+    }
 
+    # Generate response
     with torch.no_grad():
 
         outputs = model.generate(
@@ -44,12 +51,19 @@ def generate_answer(question: str):
             pad_token_id=tokenizer.eos_token_id,
         )
 
-    answer = tokenizer.decode(
-        outputs[0],
-        skip_special_tokens=True,
-    )
+    # Decode ONLY the newly generated tokens
+    generated_tokens = outputs[0][inputs["input_ids"].shape[-1]:]
 
-    if answer.startswith(prompt):
-        answer = answer[len(prompt):].strip()
+    answer = tokenizer.decode(
+        generated_tokens,
+        skip_special_tokens=True,
+    ).strip()
+
+    # Remove any remaining assistant tag
+    if answer.lower().startswith("assistant"):
+        answer = answer[len("assistant"):].strip()
+
+    if answer.startswith(":"):
+        answer = answer[1:].strip()
 
     return answer

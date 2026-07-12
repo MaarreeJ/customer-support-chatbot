@@ -33,8 +33,9 @@ with open(css_path, encoding="utf-8") as f:
 
 ## API_URL = "http://127.0.0.1:8000/chat"
 
-API_URL = "https://hydrant-cosigner-cabdriver.ngrok-free.dev/chat"
+## API_URL = "https://hydrant-cosigner-cabdriver.ngrok-free.dev/chat"
 
+API_URL = "https://customer-support-api.runpod.ai/chat"
 # -------------------------------
 # Sidebar
 # -------------------------------

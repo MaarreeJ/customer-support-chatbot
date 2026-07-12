@@ -1,0 +1,27 @@
+.main {
+    background-color: #f5f7fb;
+}
+
+.block-container {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    max-width: 900px;
+}
+
+.stChatMessage {
+    border-radius: 14px;
+    padding: 10px;
+}
+
+h1 {
+    color: #1E3A8A;
+}
+
+hr {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar .sidebar-content {
+    background-color: #E8EEF7;
+}

@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+torch
+transformers
+peft
+accelerate
+bitsandbytes
+sentencepiece
+huggingface_hub
+safetensors
+python-dotenv
+requests
+pydantic

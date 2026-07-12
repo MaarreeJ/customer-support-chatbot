@@ -366,24 +366,51 @@ Possible future enhancements include:
 
 ---
 
-# Technologies Used
+# # Technologies Used
 
+## Programming Language
 - Python
+
+## AI / Machine Learning
 - Unsloth
 - Hugging Face Transformers
-- PEFT
-- TRL
+- PyTorch
+- PEFT (LoRA)
+- TRL (DPO Trainer)
+
+## Fine-Tuning Techniques
 - LoRA
 - QLoRA
-- DPO
-- PyTorch
+- Supervised Fine-Tuning (SFT)
+- Direct Preference Optimization (DPO)
+
+## Backend
 - FastAPI
+
+## Frontend
 - Streamlit
+
+## Model Hosting
+- Hugging Face Hub
+
+## Development & Deployment
+- GitHub
 - RunPod
 - ngrok
-- GitHub
-- Hugging Face
 
+## Mermaid workflow
+
+flowchart LR
+A[Base LLM]
+B[Non-Instruction Fine-Tuning]
+C[Instruction Fine-Tuning (SFT)]
+D[DPO Alignment]
+E[Merged Model]
+F[FastAPI Backend]
+G[Streamlit UI]
+
+A --> B --> C --> D --> E --> F --> G
+```
 ---
 
 # Author

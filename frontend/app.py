@@ -16,13 +16,15 @@ st.set_page_config(
 # Load CSS
 # -------------------------------
 
+
+
 from pathlib import Path
 
 css_path = Path(__file__).parent / "style.css"
 
-with open("style.css") as f:
+with open(css_path, encoding="utf-8") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-    
+
 
 
 # -------------------------------

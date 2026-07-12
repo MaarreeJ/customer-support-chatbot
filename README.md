@@ -399,25 +399,17 @@ Possible future enhancements include:
 - ngrok
 
 
-````markdown
+
 ## 🏗️ Architecture Diagram
 
 ```mermaid
 graph LR
-    A["Base LLM"]
-    B["Non-Instruction Fine-Tuning"]
-    C["Instruction Fine-Tuning (SFT)"]
-    D["DPO Alignment"]
-    E["Merged Model"]
-    F["FastAPI Backend"]
-    G["Streamlit UI"]
-
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
+    A["Base LLM"] --> B["Non-Instruction Fine-Tuning"]
+    B --> C["Instruction Fine-Tuning - SFT"]
+    C --> D["DPO Alignment"]
+    D --> E["Merged Model"]
+    E --> F["FastAPI Backend"]
+    F --> G["Streamlit UI"]
 ```
 ---
 

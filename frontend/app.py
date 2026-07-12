@@ -33,8 +33,7 @@ with open(css_path, encoding="utf-8") as f:
 
 ## API_URL = "http://127.0.0.1:8000/chat"
 
-API_URL = "https://hr-assistant-api.onrender.com/chat"
-
+API_URL = "https://hydrant-cosigner-cabdriver.ngrok-free.dev/chat"
 
 # -------------------------------
 # Sidebar
